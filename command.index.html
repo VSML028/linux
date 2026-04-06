@@ -1,0 +1,147 @@
+command <options> <inputs> (linux based  to working)
+
+/home/ec2-user --> linux home directory
+/c/users/siva --> windows home directory
+
+cd --> change directory
+
+cd .. --> one step back
+
+ls --> list subdirectories
+
+uname  ---- linux
+uname -a
+
+Linux OS --> Redhat, Ubuntu, centos, fedore, suse, oracle linux, amazon linux, debian, rocky linux, kali, solaris
+
+How tocreate firewall?
+
+Fire wall  creation :-
+This is like inbound & out bound  server ports connection process.servers in coming & outgoing permission to sercurity groups.
+
+How to create key pair?
+
+ssh-keygen -f <file-name>   (ssh key genarete in linux purpose connect server)
+
+Internet coonecton used to public key 
+lock = public
+key = private
+
+key pairs --> public key and private key
+
+Key pair--->  key pairs-> import key pairs---> name  & upload the generative pub.key---->select--->ok.
+
+Linux is os or not --> Linux is kernel
+
+OS --> to interact with hardware
+
+Kernal --> heart and brain of OS
+
+ls -ltrh   
+/ --> root directory
+
+ls -l --> long listing format in alphabetical order
+ls -lr --> long listing format in reverse alphabetical order
+ls -lt --> latest files on top
+ls -ltr --> latest at bottom
+ls -la --> all files including hidden files and folders
+
+folder created by (mkdir) command linux
+file created by (touch) command linux
+cat > <file-name> --> type text, enter and ctrl+d
+cat devops.text (read the fine content)
+hello i'm learning devsecops with real time project AWS 
+
+previous content will be replaced
+cat >> <file-name> --> appends text to previous content
+
+pwd --> present working directory
+cd /home/ec2-user --> change directory to home
+cd .. --> one step back
+cd / --> change directory to root
+touch devops.text --> create a file
+mkdir devops --> create a folder
+
+CRUD --> create read update delete.
+rm devops.text remove files
+wget <URL> --> downloads the file
+curl <URL> --> shows on the screen
+
+cat <file-name> | grep <word-to-search>
+grep <word-to-search> <file>
+
+https://raw.githubusercontent.com/daws-84s/notes/refs/heads/main/session-02.txt
+
+echo https://raw.githubusercontent.com/daws-84s/notes/refs/heads/main/session-02.txt | cut -d "/" -f1
+
+vim --> text editor in linux
+vi --> text editor in linux
+vim editor
+
+CAT >
+CAT >>
+
+vim <file-name>
+
+3 MODEs
+Esc, Colon, insert MODEs
+
+command MODE
+==============
+:q -> quit the file
+:wq --> write and quit
+:wq! --> force write and quit
+:q! --> exit without saving
+:/<word-search> --> search for the word from top
+:?<word-search> --> search for the word from bottom
+:noh --> no highlight
+:27 d --> delete 27th line
+:%d --> total content will be deleted
+:3s/sbin/SBIN --> in 3rd line first occurence of sbin will be replaced with SBIN
+:3s/sbin/SBIN/g --> all occurence in that line
+:%s/sbin/SBIN/g --> all occurences in the file
+
+ec2-user to root user switch command
+sudo su ---> switch to root user
+
+Linux Administration
+=====================
+User management
+CRUD
+useradd <user-name> --> create user
+id <user-name> --> displays the user info
+
+group --> list of similar users
+devops team have 20 members
+create devops group, add team members to the group
+
+in linux when you create user, by default group also will be created with same name..
+primary group and secondary group
+
+1 primary group, atleast one secondary group
+
+groupadd devops --> devops group will be created
+
+usermod -g devops suresh
+usermod -aG testers suresh
+
+passwd <user-name>
+
+usermod -g devops(group) suresh(user)   premary group
+usermod -aG testers suresh secondry group
+
+groupdel gvrao --> delete group
+userdel gvrao --> delete user
+
+gpasswd <group-name> --> change group password
+gpasswd -a gvrao devops --> add user to group
+
+gpasswd -d --> remove user from group
+gpasswd -d gvrao devops --> remove user from group
+gpasswd -d gvrao testers --> delete user password
+
+vim /etc/passwd --> user info
+vim /etc/group --> group info
+
+vim /etc/ssh/sshd_config --> ssh configuration file (SSH server configuration file)
+password authentication --> password based login (no remove yes)
